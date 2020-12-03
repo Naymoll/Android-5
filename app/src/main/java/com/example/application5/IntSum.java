@@ -37,15 +37,15 @@ public class IntSum extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-         resultText = view.findViewById(R.id.resultText);
+         resultText = view.findViewById(R.id.result_int_text);
 
         if (savedInstanceState != null) {
             resultText.setText(savedInstanceState.getString(INT_KEY));
         }
 
-        Button sumButton = view.findViewById(R.id.sumButton);
-        TextView firstNumber = view.findViewById(R.id.firstNumber);
-        TextView secondNumber = view.findViewById(R.id.secondNumber);
+        Button sumButton = view.findViewById(R.id.sum_int_button);
+        TextView firstNumber = view.findViewById(R.id.first_int_number);
+        TextView secondNumber = view.findViewById(R.id.second_int_number);
 
         sumButton.setOnClickListener (v -> {
             if (firstNumber.getText().length() == 0 || secondNumber.getText().length() == 0) {

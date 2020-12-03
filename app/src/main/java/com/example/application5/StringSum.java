@@ -29,22 +29,22 @@ public class StringSum extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_int_sum, container, false);
+        return inflater.inflate(R.layout.fragment_string_sum, container, false);
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        resultText = view.findViewById(R.id.resultText);
+        resultText = view.findViewById(R.id.result_string_text);
 
         if (savedInstanceState != null) {
             resultText.setText(savedInstanceState.getString(STRING_KEY));
         }
 
-        Button sumButton = view.findViewById(R.id.sumButton);
-        TextView firstText = view.findViewById(R.id.firstText);
-        TextView secondText = view.findViewById(R.id.secondText);
+        Button sumButton = view.findViewById(R.id.sum_string_button);
+        TextView firstText = view.findViewById(R.id.first_string_text);
+        TextView secondText = view.findViewById(R.id.second_string_text);
 
         sumButton.setOnClickListener (v -> {
             if (firstText.getText().length() == 0 || secondText.getText().length() == 0) {
